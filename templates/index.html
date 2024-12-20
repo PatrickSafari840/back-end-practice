@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home</title>
+    <style>
+        body {
+            background-image: url('/static/background-image.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: block;
+            font-family: 'Arial', sans-serif;
+        }
+        header {
+            text-align: center;
+            background-color: #4a148c;
+            color: white;
+            padding: 1.5em 0;
+        }
+        main {
+            text-align: center;
+            color: white;
+        }
+        .leave-recommendation {
+            margin-top: 5em;
+        }
+        .leave-recommendation form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .leave-recommendation label {
+            margin-top: 1em;
+        }
+        .leave-recommendation input,
+        .leave-recommendation textarea {
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200%;
+            max-width: 400px;
+            margin-bottom: 1em;
+        }
+        .leave-recommendation button {
+            background-color: #4a148c;
+            color: white;
+            width: 10%;
+        }
+        footer {
+            position: static;
+            text-align: center;
+            background-color: #4a148c;
+            color: white;
+            padding: 1.5em 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Welcome to my website database test!</h1>
+        <a href = 'view_comments.html' style="color: aliceblue;" > view_comment</a>
+    </header>
+    <main>
+        <h2>Feel free to write in anything you want</h2>
+        <br>
+        <div class="leave-recommendation">
+            <form id="recommendation-form" action="/add_comment" method="post">
+                <label for="name">Name (Optional)</label>
+                <input type="text" id="name" name="name">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <br><br>
+    <footer>
+        <p>Developed by Patrick Safari</p>
+    </footer>
+</body>
+</html>
